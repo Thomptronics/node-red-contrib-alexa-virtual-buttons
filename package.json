@@ -1,5 +1,5 @@
 {
-    "name": "@Thomptronics/node-red-contrib-alexa-virtual-buttons",
+    "name": "@thomptronics/node-red-contrib-alexa-virtual-buttons",
     "version": "1.0.0",
     "description": "A Node-RED node to trigger Alexa Routines via the Virtual Buttons skill by Thomptronics",
     "dependencies": {
@@ -15,12 +15,12 @@
         "node-red", "alexa", "routine", "trigger", "virtual", "button", "www.virtualbuttons.com"
     ],
     "bugs": {
-        "url": "https://github.com/bartbutenaers/node-red-contrib-alexa-virtual-buttons/issues"
+        "url": "https://github.com/Thomptronics/node-red-contrib-alexa-virtual-buttons/issues"
     },
-    "homepage": "https://github.com/bartbutenaers/node-red-contrib-alexa-virtual-buttons",
+    "homepage": "https://github.com/Thomptronics/node-red-contrib-alexa-virtual-buttons",
     "repository": {
         "type": "git",
-        "url": "https://github.com/bartbutenaers/node-red-contrib-alexa-virtual-buttons.git"
+        "url": "https://github.com/Thomptronics/node-red-contrib-alexa-virtual-buttons.git"
     },
     "node-red": {
         "version": ">=1.3.0",

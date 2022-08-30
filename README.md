@@ -7,7 +7,7 @@ IMPORTANT NOTE: Virtual Buttons is only available in the countries that allow En
 ## Install
 Run the following npm command in your Node-RED user directory (typically ~/.node-red):
 ```
-npm install node-red-contrib-alexa-virtual-buttons
+npm install @thomptronics/node-red-contrib-alexa-virtual-buttons
 ```
 
 ## Node Configuration

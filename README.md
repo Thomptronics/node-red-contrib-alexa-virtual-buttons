@@ -1,5 +1,5 @@
 # node-red-contrib-alexa-virtual-buttons
-A Node-RED node to trigger Alexa Routines via the [Virtual Buttons](https://amzn.to/3fNU09R) skill by Thomptronics. To learn more about Virtual Buttons, please visit www.virtualbuttons.com
+A Node-RED node to trigger Alexa Routines via the [Virtual Buttons skill by Thomptronics](https://amzn.to/3fNU09R). To learn more about Virtual Buttons, please visit www.virtualbuttons.com
 
 
 IMPORTANT NOTE: Virtual Buttons is only available in the countries that allow English-speaking Alexa skills.
@@ -13,14 +13,15 @@ npm install @thomptronics/node-red-contrib-alexa-virtual-buttons
 ## Node Configuration
 
 ### Access Code
-```Access Code``` is required for communications with Alexa. See www.virtualbuttons.com for detailed information how to get your own private access code.
+Put your ```Access Code``` in the node's Properties tab.  The ```Access Code``` is required for communications with Alexa.
 
-When the access code is not specified in the node's Properties tab, then it should be specified in the input message ```msg.accessCode``` field. An access code passed in ```msg.accessCode``` will override any access code you put in the node's Properties tab.
+See www.virtualbuttons.com for detailed information how to get your own unique access code.
+
 
 ### Virtual Button
-The ```Virtual Button``` specifies the button you want to press (1 to 99). When empty, the button number needs to be specified inside the ```msg.payload``` of the input message.
+The ```Virtual Button``` field specifies the button you want to press (1 to 99). You can pass a button number in the ```msg.payload``` of the input message, or you can enter it in the node's Properties tab.
 
-A Virtual Button number passed in ```msg.payload``` will override any value you set in the node's Properties tab.
+A Virtual Button number passed in ```msg.payload``` will override any value you set in the node's Properties tab. If both are blank, the virtual button number defaults to 1.
 
 ## Node Usage
 The following flow is a simple example of how to use this node to trigger Alexa Routines.

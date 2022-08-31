@@ -33,16 +33,15 @@ module.exports = function(RED) {
     this.on("input",function(msg) {
 
       // check access code
-      let accessCode = msg.accessCode ? msg.accessCode : node.credentials.accessCode;
-      // see if there is an access code - if not bug out with an error message
+      let accessCode = node.credentials.accessCode;
       if (!accessCode) {
-         node.warn(RED._("No Access Code has been specified in properties tab or msg.accessCode"));
+         node.warn(RED._("No Access Code found in Properties tab"));
          node.status({fill:"red", shape:"ring", text:"no Access Code"});
          return;
       }
 
       // check button number
-      let virtualButton = msg.payload ? msg.payload : node.virtualButton;
+      let virtualButton = msg.payload ? msg.payload : (node.virtualButton ? node.virtualButton : "01");
       let errmsg = "";
       if (virtualButton) {
         switch(typeof virtualButton) {
@@ -50,7 +49,7 @@ module.exports = function(RED) {
             break;
           case "string":
             if (isNaN(Number(virtualButton))) {
-              errmsg = "msg.payload must contain a valid a number between 1 and 99. It cannot be a letter, symbol, or empty string.";
+              errmsg = "msg.payload must contain a valid a number between 1 and 99. It cannot be a letter or symbol.";
             }
             break;
           case "boolean":

@@ -1,6 +1,6 @@
 {
     "name": "@thomptronics/node-red-contrib-alexa-virtual-buttons",
-    "version": "1.2.5",
+    "version": "1.2.6",
     "description": "A Node-RED node to trigger Alexa Routines via the Virtual Buttons skill by Thomptronics",
     "dependencies": {
         "request": "2.88.0"
